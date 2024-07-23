@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://4kl4e68bedud"]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_2fq3i"]
+[ext_resource type="PackedScene" uid="uid://bcrtccs57artm" path="res://scenes/bg_scene.tscn" id="1_wsqgu"]
+[ext_resource type="PackedScene" uid="uid://bnudx3jebd8hn" path="res://scenes/birb.tscn" id="2_kgm33"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_2fq3i")
+
+[node name="BGs" type="Node" parent="."]
+
+[node name="BGScene1" parent="BGs" groups=["backgrounds"] instance=ExtResource("1_wsqgu")]
+
+[node name="BGScene2" parent="BGs" groups=["backgrounds"] instance=ExtResource("1_wsqgu")]
+position = Vector2(320, 0)
+
+[node name="All_Pipes" type="Node" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Birb" parent="." instance=ExtResource("2_kgm33")]
+z_index = 1
+position = Vector2(48, 64)
+
+[node name="PipeSpawner" type="Timer" parent="."]
+wait_time = 2.0

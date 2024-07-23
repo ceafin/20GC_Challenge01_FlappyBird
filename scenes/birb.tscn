@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnudx3jebd8hn"]
+
+[ext_resource type="Script" path="res://scripts/birb.gd" id="1_e72v5"]
+[ext_resource type="Texture2D" uid="uid://c0de8p2j2ieg" path="res://assets/flappinBirb.png" id="1_unmtq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5nrm"]
+atlas = ExtResource("1_unmtq")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iixmu"]
+atlas = ExtResource("1_unmtq")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bvq2j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5nrm")
+}],
+"loop": true,
+"name": &"down",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iixmu")
+}],
+"loop": true,
+"name": &"up",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vgc8q"]
+radius = 8.0
+
+[node name="Birb" type="CharacterBody2D"]
+script = ExtResource("1_e72v5")
+
+[node name="AniSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bvq2j")
+animation = &"down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vgc8q")
