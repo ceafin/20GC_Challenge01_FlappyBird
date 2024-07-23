@@ -1,6 +1,6 @@
 # Flappy Bird (The 20 Games Challenge #1 (alt)
 
-This is my project for [The 20 Games Challenge](https://20_games_challenge.gitlab.io/), [#1 Pong](https://20_games_challenge.gitlab.io/games/flappybird/). _(Also, [The 20 Games Challenge on Itch.io](https://sdggames.itch.io/20-in-30))_
+This is my project for [The 20 Games Challenge](https://20_games_challenge.gitlab.io/), [#1 (alt) Flappy Bird](https://20_games_challenge.gitlab.io/games/flappy/). _(Also, [The 20 Games Challenge on Itch.io](https://sdggames.itch.io/20-in-30))_
 
 ## Thanks to...
 
