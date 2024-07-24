@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://bnudx3jebd8hn"]
 
 [ext_resource type="Script" path="res://scripts/birb.gd" id="1_e72v5"]
-[ext_resource type="Texture2D" uid="uid://c0de8p2j2ieg" path="res://assets/flappinBirb.png" id="1_unmtq"]
+[ext_resource type="Texture2D" uid="uid://chfvvvdv8qbe5" path="res://assets/dragonfly.png" id="2_u0avw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m5nrm"]
-atlas = ExtResource("1_unmtq")
-region = Rect2(0, 0, 18, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_aawms"]
+atlas = ExtResource("2_u0avw")
+region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iixmu"]
-atlas = ExtResource("1_unmtq")
-region = Rect2(18, 0, 18, 18)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcmy0"]
+atlas = ExtResource("2_u0avw")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bvq2j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m5nrm")
+"texture": SubResource("AtlasTexture_aawms")
 }],
 "loop": true,
 "name": &"down",
@@ -23,7 +23,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iixmu")
+"texture": SubResource("AtlasTexture_jcmy0")
 }],
 "loop": true,
 "name": &"up",

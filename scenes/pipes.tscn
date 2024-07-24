@@ -9,8 +9,9 @@ size = Vector2(30, 126)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ld36k"]
 size = Vector2(30, 126)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eqlct"]
-height = 60.0
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_myvsj"]
+a = Vector2(0, -26)
+b = Vector2(0, 26)
 
 [node name="Pipes" type="Node2D"]
 script = ExtResource("1_cm1gh")
@@ -36,9 +37,12 @@ texture = ExtResource("1_3721u")
 shape = SubResource("RectangleShape2D_ld36k")
 
 [node name="Points" type="Area2D" parent="."]
+position = Vector2(18, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Points"]
-position = Vector2(25, 0)
-shape = SubResource("CapsuleShape2D_eqlct")
+shape = SubResource("SegmentShape2D_myvsj")
+debug_color = Color(0.803922, 0.00392157, 1, 0.419608)
 
+[connection signal="body_entered" from="UpperArea2D" to="." method="_on_hit_a_pipe"]
+[connection signal="body_entered" from="LowerArea2D" to="." method="_on_hit_a_pipe"]
 [connection signal="body_entered" from="Points" to="." method="_on_points_body_entered"]

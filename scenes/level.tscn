@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://4kl4e68bedud"]
+[gd_scene load_steps=7 format=3 uid="uid://4kl4e68bedud"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_2fq3i"]
 [ext_resource type="PackedScene" uid="uid://bcrtccs57artm" path="res://scenes/bg_scene.tscn" id="1_wsqgu"]
 [ext_resource type="PackedScene" uid="uid://bnudx3jebd8hn" path="res://scenes/birb.tscn" id="2_kgm33"]
+[ext_resource type="Texture2D" uid="uid://cd2mb1xtii5w4" path="res://assets/scoreboard.png" id="4_m0gxh"]
+[ext_resource type="FontFile" uid="uid://ca7metrxd3dyu" path="res://resources/Early GameBoy.ttf" id="4_obr4w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x5ooq"]
+font = ExtResource("4_obr4w")
+font_color = Color(0.607843, 0.737255, 0.0588235, 1)
+outline_color = Color(0.0588235, 0.219608, 0.0588235, 1)
+shadow_size = 4
+shadow_color = Color(0.0588235, 0.219608, 0.0588235, 1)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_2fq3i")
@@ -25,3 +34,73 @@ position = Vector2(48, 64)
 
 [node name="PipeSpawner" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ScoreBoard" type="TextureRect" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 24.0
+grow_horizontal = 2
+texture = ExtResource("4_m0gxh")
+stretch_mode = 2
+
+[node name="Score" type="Label" parent="UI/ScoreBoard"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 16
+text = "0"
+label_settings = SubResource("LabelSettings_x5ooq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverMenu" type="VBoxContainer" parent="UI"]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -10.0
+offset_right = 4.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonRestart" type="Button" parent="UI/GameOverMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.545098, 0.67451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.607843, 0.737255, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.607843, 0.737255, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.607843, 0.737255, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("4_obr4w")
+theme_override_font_sizes/font_size = 8
+text = "Restart"
+
+[node name="ButtonQuit" type="Button" parent="UI/GameOverMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.545098, 0.67451, 0.0588235, 1)
+theme_override_colors/font_pressed_color = Color(0.607843, 0.737255, 0.0588235, 1)
+theme_override_colors/font_hover_color = Color(0.607843, 0.737255, 0.0588235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.607843, 0.737255, 0.0588235, 1)
+theme_override_fonts/font = ExtResource("4_obr4w")
+theme_override_font_sizes/font_size = 8
+text = "Quit"
+
+[connection signal="pressed" from="UI/GameOverMenu/ButtonRestart" to="." method="_on_button_restart_pressed"]
+[connection signal="pressed" from="UI/GameOverMenu/ButtonQuit" to="." method="_on_button_quit_pressed"]

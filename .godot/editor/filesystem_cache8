@@ -1,0 +1,32 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1721783577
+export_presets.cfg::TextFile::-1::1721783577::0::1::::<><>::
+README.md::TextFile::-1::1721757160::0::1::::<><>::
+::res://assets/::1721782770
+dragonfly.png::CompressedTexture2D::5275798828766465690::1721782767::1721782770::1::::<><>::
+flappinBirb.png::CompressedTexture2D::192178182963953206::1721757160::1721757187::1::::<><>::
+icon.svg::CompressedTexture2D::1821012640402352700::1721757160::1721757187::1::::<><>::
+pipe.png::CompressedTexture2D::7895788131105681720::1721757160::1721757187::1::::<><>::
+scoreboard.png::CompressedTexture2D::5039877889378934625::1721761625::1721761627::1::::<><>::
+sml2.png::CompressedTexture2D::899315355469629203::1721757160::1721757187::1::::<><>::
+::res://export/::1721783612
+::res://export/floppyfish/::1721783606
+index.apple-touch-icon.png::CompressedTexture2D::6701788281079068676::1721783576::1721783616::1::::<><>::
+index.icon.png::CompressedTexture2D::8256722384357385789::1721783576::1721783616::1::::<><>::
+index.png::CompressedTexture2D::3124559052374066452::1721783576::1721783616::1::::<><>::
+::res://resources/::1721783376
+bg_scene.tres::TileSet::4921166591282774336::1721783376::0::1::::<><>::uid://m2vue7en47gp::::res://assets/sml2.png
+Early GameBoy.ttf::FontFile::4839638227860388480::1388882366::1721759278::1::::<><>::
+::res://scenes/::1721783376
+bg_scene.tscn::PackedScene::2563050121497580182::1721783376::0::1::::<><>::res://scripts/bg_scene.gd<>uid://ccd35ol6ltvwy::::res://resources/bg_scene.tres
+birb.tscn::PackedScene::3340387915047107687::1721783376::0::1::::<><>::res://scripts/birb.gd<>uid://chfvvvdv8qbe5::::res://assets/dragonfly.png
+level.tscn::PackedScene::2056840177470414151::1721783376::0::1::::<><>::res://scripts/level.gd<>uid://bcrtccs57artm::::res://scenes/bg_scene.tscn<>uid://bnudx3jebd8hn::::res://scenes/birb.tscn<>uid://cd2mb1xtii5w4::::res://assets/scoreboard.png<>uid://ca7metrxd3dyu::::res://resources/Early GameBoy.ttf
+pipes.tscn::PackedScene::6136769133542017897::1721783376::0::1::::<><>::uid://dkq1qhljbdqwe::::res://assets/pipe.png<>res://scripts/pipes.gd
+splash_title.tscn::PackedScene::8391200451363068242::1721783376::0::1::::<><>::res://scripts/splash_title.gd<>uid://m2vue7en47gp::::res://assets/sml2.png<>uid://chfvvvdv8qbe5::::res://assets/dragonfly.png<>uid://c0de8p2j2ieg::::res://assets/flappinBirb.png<>uid://ca7metrxd3dyu::::res://resources/Early GameBoy.ttf
+::res://scripts/::1721783191
+bg_scene.gd::GDScript::-1::1721757160::0::1::::<>Node2D<>::
+birb.gd::GDScript::-1::1721766773::0::1::::Birb<>CharacterBody2D<>::
+event_bus.gd::GDScript::-1::1721765068::0::1::::<>Node<>::
+level.gd::GDScript::-1::1721765449::0::1::::<>Node2D<>::
+pipes.gd::GDScript::-1::1721762678::0::1::::<>Node2D<>::
+splash_title.gd::GDScript::-1::1721783191::0::1::::<>Node2D<>::

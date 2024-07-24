@@ -10,16 +10,24 @@ config_version=5
 
 [application]
 
-config/name="Flappy Bird"
+config/name="Floppy Fish"
+config/description="Floppy Fish, a project for The 20 Games Challenge, Level 1"
+run/main_scene="res://scenes/splash_title.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/image="res://assets/dragonfly.png"
+boot_splash/fullsize=false
 config/icon="res://assets/icon.svg"
+
+[autoload]
+
+EventBus="*res://scripts/event_bus.gd"
 
 [display]
 
 window/size/viewport_width=160
 window/size/viewport_height=144
-window/size/window_width_override=1600
-window/size/window_height_override=1440
+window/size/window_width_override=320
+window/size/window_height_override=288
 window/stretch/mode="canvas_items"
 
 [rendering]
